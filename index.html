@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>今日のニュース</title>
 
-  <!-- iOS アプリっぽく -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
@@ -17,7 +16,6 @@
       color: #000000;
     }
 
-    /* 🌙 ダークモード */
     @media (prefers-color-scheme: dark) {
       body {
         background: #000000;
@@ -25,7 +23,7 @@
       }
     }
 
-    /* 起動画面（白画面防止） */
+    /* 起動画面 */
     #splash {
       position: fixed;
       inset: 0;
@@ -37,16 +35,6 @@
       z-index: 10;
     }
 
-    #splash .logo {
-      font-size: 48px;
-      margin-bottom: 12px;
-    }
-
-    #splash .title {
-      font-size: 18px;
-      opacity: 0.7;
-    }
-
     /* ニュース */
     ul {
       list-style: none;
@@ -55,6 +43,8 @@
     }
 
     li {
+      display: flex;
+      gap: 12px;
       padding: 12px 0;
       border-bottom: 1px solid rgba(0,0,0,0.1);
     }
@@ -65,51 +55,103 @@
       }
     }
 
+    .thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: 8px;
+      background: #ddd;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .source {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-bottom: 4px;
+    }
+
     a {
       text-decoration: none;
       color: inherit;
+      font-size: 15px;
     }
   </style>
 </head>
 
 <body>
-  <!-- 起動画面 -->
   <div id="splash">
-    <div class="logo">📰</div>
-    <div class="title">今日のニュース</div>
+    <div style="font-size:48px">📰</div>
+    <div style="opacity:.7">今日のニュース</div>
   </div>
 
-  <!-- ニュース一覧 -->
   <ul id="news" style="display:none;"></ul>
 
   <script>
     const rss = "https://news.yahoo.co.jp/rss/topics/top-picks.xml";
+    const proxy = "https://api.allorigins.win/raw?url=";
+
+    function getSourceName(url) {
+      if (url.includes("nhk.or.jp")) return "NHK";
+      if (url.includes("nikkei.com")) return "日本経済新聞";
+      if (url.includes("asahi.com")) return "朝日新聞";
+      if (url.includes("yahoo.co.jp")) return "Yahoo!ニュース";
+      if (url.includes("mainichi.jp")) return "毎日新聞";
+      return new URL(url).hostname.replace("www.", "");
+    }
+
+    function fetchOGImage(url, img) {
+      fetch(proxy + encodeURIComponent(url))
+        .then(res => res.text())
+        .then(html => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          const meta = doc.querySelector('meta[property="og:image"]');
+          if (meta) img.src = meta.content;
+        })
+        .catch(() => {});
+    }
 
     fetch(rss)
       .then(res => res.text())
-      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then(str => new DOMParser().parseFromString(str, "text/xml"))
       .then(data => {
         const items = data.querySelectorAll("item");
         const list = document.getElementById("news");
 
         items.forEach(item => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
+          const link = item.querySelector("link").textContent;
 
-          a.href = item.querySelector("link").textContent;
+          const li = document.createElement("li");
+
+          const img = document.createElement("img");
+          img.className = "thumb";
+          fetchOGImage(link, img);
+
+          const content = document.createElement("div");
+          content.className = "content";
+
+          const source = document.createElement("div");
+          source.className = "source";
+          source.textContent = getSourceName(link);
+
+          const a = document.createElement("a");
+          a.href = link;
           a.textContent = item.querySelector("title").textContent;
           a.target = "_blank";
 
-          li.appendChild(a);
+          content.appendChild(source);
+          content.appendChild(a);
+
+          li.appendChild(img);
+          li.appendChild(content);
           list.appendChild(li);
         });
 
-        // 起動画面を消す
         document.getElementById("splash").style.display = "none";
         list.style.display = "block";
-      })
-      .catch(() => {
-        document.querySelector("#splash .title").textContent = "読み込み失敗";
       });
   </script>
 </body>
