@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # ← ★これが超重要！！
+  contents: write
 
 jobs:
   update:
@@ -14,33 +14,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create news.json (force)
+      - name: Update file
         run: |
-          mkdir -p data
-          cat > data/news.json << 'EOF'
-          {
-            "updated": "$(date)",
-            "items": [
-              {
-                "title": "テストニュース",
-                "source": "GitHub Actions",
-                "url": "https://github.com",
-                "image": ""
-              }
-            ]
-          }
-          EOF
+          echo "last_update: $(date)" > last_update.txt
 
-      - name: Commit changes safely
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add data/news.json
+          git config user.email "github-actions@github.com"
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git commit -m "Update news.json"
+          git add .
+          git commit -m "Update news" || echo "No changes to commit"
           git push
