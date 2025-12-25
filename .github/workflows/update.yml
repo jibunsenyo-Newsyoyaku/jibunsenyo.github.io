@@ -3,6 +3,9 @@ name: Update News
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write   # ← ★これが超重要！！
+
 jobs:
   update:
     runs-on: ubuntu-latest
