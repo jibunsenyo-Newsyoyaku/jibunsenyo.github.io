@@ -2,31 +2,37 @@ name: Update News
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
-  workflow_dispatch:
+    - cron: "0 */3 * * *"   # 3時間ごと
+  workflow_dispatch:       # 手動実行も可
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # ← これ重要
 
     steps:
+      # ① リポジトリ取得
       - uses: actions/checkout@v4
 
+      # ② jq を明示的にインストール
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      # ③ RSS取得 → JSON生成（null耐性あり）
       - name: Fetch RSS
         run: |
           curl -s "https://api.rss2json.com/v1/api.json?rss_url=https://news.yahoo.co.jp/rss/topics/top-picks.xml" \
-          | jq '[.items[] | {
+          | jq '[.items // [] | .[] | {
               title: .title,
               link: .link,
               source: "Yahoo!ニュース",
               image: (.thumbnail // "")
             }]' > news.json
 
+          # 念のため中身確認（ログ用）
+          echo "===== news.json ====="
+          cat news.json
+
+      # ④ 変更があればコミット＆プッシュ
       - name: Commit update
         run: |
           git config user.name "github-actions"
