@@ -1,28 +1,36 @@
 name: Update News
 
 on:
+  schedule:
+    - cron: "0 */3 * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # ← これ重要
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Update file
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Fetch RSS
         run: |
-          echo "last_update: $(date)" > last_update.txt
+          curl -s "https://api.rss2json.com/v1/api.json?rss_url=https://news.yahoo.co.jp/rss/topics/top-picks.xml" \
+          | jq '[.items[] | {
+              title: .title,
+              link: .link,
+              source: "Yahoo!ニュース",
+              image: (.thumbnail // "")
+            }]' > news.json
 
-      - name: Commit and push
+      - name: Commit update
         run: |
           git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add .
-          git commit -m "Update news" || echo "No changes to commit"
+          git config user.email "actions@github.com"
+          git add news.json
+          git commit -m "Update news" || exit 0
           git push
