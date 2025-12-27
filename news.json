@@ -1,104 +1,44 @@
 [
   {
-    "title": "群馬 関越道で多重事故 1人死亡 26人重軽傷 スリップが原因か",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015301000",
-    "image": "",
-    "source": "NHK"
+    "title": "群馬 関越道で多重事故 車内から新たに1人の遺体 死者2人に",
+    "link": "http://www3.nhk.or.jp/news/html/20251226/k10015015301000.html",
+    "source": "NHK",
+    "image": ""
   },
   {
-    "title": "静岡 三島 工場で15人刺傷など 勤務交代時間帯の犯行",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015021000",
-    "image": "",
-    "source": "NHK"
+    "title": "静岡 三島の工場 15人刺傷事件 容疑者は元従業員 経緯を捜査",
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015015371000.html",
+    "source": "NHK",
+    "image": ""
+  },
+  {
+    "title": "タイとカンボジアの軍事衝突 即時停戦で合意",
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015015471000.html",
+    "source": "NHK",
+    "image": ""
   },
   {
     "title": "帰省ラッシュ始まる 新幹線・航空・高速道路は混雑",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015161000",
-    "image": "",
-    "source": "NHK"
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015015161000.html",
+    "source": "NHK",
+    "image": ""
   },
   {
-    "title": "【ライブ配信中】年末年始 帰省ラッシュ 高速道路の状況は",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015361000",
-    "image": "",
-    "source": "NHK"
+    "title": "“トランプ大統領 ISへの攻撃 クリスマスに変更” 米メディア",
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015015431000.html",
+    "source": "NHK",
+    "image": ""
   },
   {
-    "title": "保護司“引き受けたくない”80％超 内閣府の世論調査",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015391000",
-    "image": "",
-    "source": "NHK"
+    "title": "「トケマッチ」元代表ら オンラインカジノ関係口座に送金か",
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015015411000.html",
+    "source": "NHK",
+    "image": ""
   },
   {
-    "title": "イスラエル 独立を一方的に宣言する“ソマリランド”国家承認",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015381000",
-    "image": "",
-    "source": "NHK"
-  },
-  {
-    "title": "映画「国宝」 年末年始も約400館で上映 異例のロングラン",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015015341000",
-    "image": "",
-    "source": "NHK"
-  },
-  {
-    "title": "いよいよ動き始めた、ソニー「Contents Production Accelerator」の正体",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news115.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "ビックカメラ、元旦の初売りで「SIMフリーiPhone福箱」9万9800円、「ゲーミングパソコン福箱」11万9980円など",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news114.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "マイニンテンドーストアで「Switch 2」の販売再開へ　再開日や条件は「改めて案内」",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news105.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "「ディスプレイ付き室内扉」「ワニ革張り扉」で海外富裕層を攻略　とあるドア専門メーカーの挑戦",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/24/news127.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "「AUREX」の東芝エルイー、親会社に吸収合併へ",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news092.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "映画「ホームアローン」の“家族全員寝坊”はどれくらいの確率で起こる？　物理学者が本気で計算",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news082.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "ドンキも福袋　50インチ4Kテレビ＆サウンドバーセットで5.5万円など　元旦から店頭で販売",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news085.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "「ドラクエX」、ブラウザ版と無料の「キッズタイム」終了へ　「お客様の多くが成人であった」ため",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/26/news077.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "パンチの効いた第三者委員会報告書セレクション2025　今年の“ベスト他山の石”は",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/24/news109.html",
-    "image": "",
-    "source": "ITmedia"
-  },
-  {
-    "title": "楽天モバイル、悲願の1000万回線突破　三木谷氏「短かったような長かったような道のりだった」",
-    "link": "https://www.itmedia.co.jp/news/articles/2512/25/news120.html",
-    "image": "",
-    "source": "ITmedia"
+    "title": "戦争の記憶伝える語り部への依頼 戦後80年の今年度急増",
+    "link": "http://www3.nhk.or.jp/news/html/20251227/k10015013241000.html",
+    "source": "NHK",
+    "image": ""
   }
 ]
