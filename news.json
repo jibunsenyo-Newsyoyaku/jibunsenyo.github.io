@@ -1,11 +1,5 @@
 [
   {
-    "title": "21日～25日ごろ 北～西日本日本海側など大雪おそれ 早め備えを",
-    "link": "http://www3.nhk.or.jp/news/html/20260120/k10015030341000.html",
-    "source": "NHK",
-    "image": ""
-  },
-  {
     "title": "東京電力 柏崎刈羽原発6号機 21日にも再稼働を検討",
     "link": "http://www3.nhk.or.jp/news/html/20260120/k10015031331000.html",
     "source": "NHK",
@@ -14,6 +8,12 @@
   {
     "title": "衆院選へ与野党各党が準備加速 候補の擁立作業など進める",
     "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031351000.html",
+    "source": "NHK",
+    "image": ""
+  },
+  {
+    "title": "トランプ大統領 「ダボス会議」で演説へ 発言に注目集まる",
+    "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031391000.html",
     "source": "NHK",
     "image": ""
   },
@@ -30,14 +30,14 @@
     "image": ""
   },
   {
-    "title": "大阪 中学生による小学生いじめ動画拡散 重大事態で調査へ",
-    "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031441000.html",
+    "title": "NYダウ 一時900ドル超の値下がり 「トリプル安」の展開に",
+    "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031511000.html",
     "source": "NHK",
     "image": ""
   },
   {
-    "title": "NYダウ 一時900ドル超の値下がり 「トリプル安」の展開に",
-    "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031511000.html",
+    "title": "強い冬型の気圧配置続く 日本海側で積雪かなり多くなるおそれ",
+    "link": "http://www3.nhk.or.jp/news/html/20260121/k10015031561000.html",
     "source": "NHK",
     "image": ""
   }
