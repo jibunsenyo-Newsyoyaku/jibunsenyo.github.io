@@ -1,17 +1,5 @@
 [
   {
-    "title": "【台風影響】3日も羽田発着便など欠航 新幹線も運休の可能性",
-    "link": "http://www3.nhk.or.jp/news/html/20260602/k10015137741000.html",
-    "source": "NHK",
-    "image": ""
-  },
-  {
-    "title": "【台風被害・影響】各地でけが人 3日の臨時休校決めた自治体も",
-    "link": "http://www3.nhk.or.jp/news/html/20260602/k10015137841000.html",
-    "source": "NHK",
-    "image": ""
-  },
-  {
     "title": "気象庁 線状降水帯情報 発表システム不具合 “復旧までHPで”",
     "link": "http://www3.nhk.or.jp/news/html/20260602/k10015138651000.html",
     "source": "NHK",
@@ -24,20 +12,32 @@
     "image": ""
   },
   {
-    "title": "クロード・ミュトス 日本政府と一部の国内銀行が利用可能に",
-    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138831000.html",
-    "source": "NHK",
-    "image": ""
-  },
-  {
-    "title": "台風6号 徳島県南部で線状降水帯直前予測",
+    "title": "台風6号 和歌山県南部に上陸 関東甲信でも線状降水帯おそれ",
     "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138881000.html",
     "source": "NHK",
     "image": ""
   },
   {
-    "title": "線状降水帯直前予測 徳島県南部で発生おそれ",
-    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138941000.html",
+    "title": "イランメディア “アメリカとの協議は数日前から停止”",
+    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138921000.html",
+    "source": "NHK",
+    "image": ""
+  },
+  {
+    "title": "徳島県南部で線状降水帯が発生 災害危険度高まる 安全確保を",
+    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138961000.html",
+    "source": "NHK",
+    "image": ""
+  },
+  {
+    "title": "和歌山県南部で線状降水帯が発生 災害危険度高まる 安全確保を",
+    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015138981000.html",
+    "source": "NHK",
+    "image": ""
+  },
+  {
+    "title": "【台風被害】松山 城山公園で倒木 奈良では建築用の足場倒れる",
+    "link": "http://www3.nhk.or.jp/news/html/20260603/k10015139021000.html",
     "source": "NHK",
     "image": ""
   }
